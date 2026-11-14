@@ -1,0 +1,29 @@
+# --- Terraform ---
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+*.tfvars
+!*.tfvars.example
+backend.hcl
+
+# --- Secrets and local credentials ---
+.env
+.env.*
+*.pem
+*.pfx
+*.key
+kubeconfig*
+
+# --- Python / Node build output ---
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+dist/
+
+# --- Editor / OS ---
+.vscode/
+.DS_Store

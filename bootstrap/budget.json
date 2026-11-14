@@ -1,0 +1,48 @@
+{
+  "properties": {
+    "category": "Cost",
+    "amount": 200,
+    "timeGrain": "Monthly",
+    "timePeriod": {
+      "startDate": "${BUDGET_START}",
+      "endDate": "2027-11-01T00:00:00Z"
+    },
+    "notifications": {
+      "actual-10-percent": {
+        "enabled": true,
+        "operator": "GreaterThanOrEqualTo",
+        "threshold": 10,
+        "thresholdType": "Actual",
+        "contactEmails": ["${ALERT_EMAIL}"]
+      },
+      "actual-25-percent": {
+        "enabled": true,
+        "operator": "GreaterThanOrEqualTo",
+        "threshold": 25,
+        "thresholdType": "Actual",
+        "contactEmails": ["${ALERT_EMAIL}"]
+      },
+      "actual-50-percent": {
+        "enabled": true,
+        "operator": "GreaterThanOrEqualTo",
+        "threshold": 50,
+        "thresholdType": "Actual",
+        "contactEmails": ["${ALERT_EMAIL}"]
+      },
+      "actual-75-percent": {
+        "enabled": true,
+        "operator": "GreaterThanOrEqualTo",
+        "threshold": 75,
+        "thresholdType": "Actual",
+        "contactEmails": ["${ALERT_EMAIL}"]
+      },
+      "forecast-100-percent": {
+        "enabled": true,
+        "operator": "GreaterThanOrEqualTo",
+        "threshold": 100,
+        "thresholdType": "Forecasted",
+        "contactEmails": ["${ALERT_EMAIL}"]
+      }
+    }
+  }
+}
